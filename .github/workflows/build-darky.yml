@@ -14,7 +14,7 @@ jobs:
     - name: "Checkout kernel source"
       uses: actions/checkout@v2
       with:
-        repository: Blacksuan19/kernel_dark_ages_vince
+        repository: lemniskett/kernel_dark_ages_vince
 
     - name: "Set variables"
       id: vars
