@@ -1,4 +1,4 @@
-name: "Build Dark Ages kernel daily"
+name: "Build Unitrix kernel daily"
 
 on:
   schedule:
@@ -7,20 +7,20 @@ on:
 
 jobs:
   build:
-    name: "Build Dark Ages kernel"
+    name: "Build Unitrix kernel"
     runs-on: ubuntu-latest
     steps:
 
     - name: "Checkout kernel source"
       uses: actions/checkout@v2
       with:
-        repository: lemniskett/kernel_dark_ages_vince
+        repository: GhostMaster69-dev/Unitrix-Kernel
 
     - name: "Set variables"
       id: vars
       run: |
         echo "::set-output name=short_sha::$(git rev-parse HEAD | cut -b 1-8 -)"
-        echo "::set-output name=release_name::Dark-Ages"
+        echo "::set-output name=release_name::Unitrix"
 
     - name: "Checkout zipper"
       uses: actions/checkout@v2
@@ -43,7 +43,7 @@ jobs:
       with:
         arch: arm64
         compiler: aosp-clang/android11-release/clang-r365631c/binutils
-        defconfig: vince_defconfig
+        defconfig: vince-perf_defconfig
         image: Image.gz-dtb
 
     - name: "Post build to Telegram"
