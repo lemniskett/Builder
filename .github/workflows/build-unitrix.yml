@@ -42,7 +42,7 @@ jobs:
         NAME: ${{ steps.vars.outputs.release_name }}
       with:
         arch: arm64
-        compiler: aosp-clang/android11-release/clang-r365631c/binutils
+        compiler: proton-clang/binutils
         defconfig: vince-perf_defconfig
         image: Image.gz-dtb
 
