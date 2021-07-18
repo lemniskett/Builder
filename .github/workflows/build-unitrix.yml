@@ -42,7 +42,7 @@ jobs:
         NAME: ${{ steps.vars.outputs.release_name }}
       with:
         arch: arm64
-        compiler: proton-clang/binutils
+        compiler: proton-clang/master/binutils
         defconfig: vince-perf_defconfig
         image: Image.gz-dtb
 
