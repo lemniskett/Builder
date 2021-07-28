@@ -1,4 +1,4 @@
-name: "Build Unitrix kernel daily"
+name: "Build Dark Ages kernel daily"
 
 on:
   schedule:
@@ -43,7 +43,7 @@ jobs:
       with:
         arch: arm64
         compiler: proton-clang/master/binutils
-        defconfig: vince-perf_defconfig
+        defconfig: vince_defconfig
         image: Image.gz-dtb
 
     - name: "Post build to Telegram"
