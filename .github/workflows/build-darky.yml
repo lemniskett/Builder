@@ -14,13 +14,13 @@ jobs:
     - name: "Checkout kernel source"
       uses: actions/checkout@v2
       with:
-        repository: GhostMaster69-dev/Unitrix-Kernel
+        repository: Blacksuan19/kernel_dark_ages_vince
 
     - name: "Set variables"
       id: vars
       run: |
         echo "::set-output name=short_sha::$(git rev-parse HEAD | cut -b 1-8 -)"
-        echo "::set-output name=release_name::Unitrix"
+        echo "::set-output name=release_name::Dark-Ages-Último"
 
     - name: "Checkout zipper"
       uses: actions/checkout@v2
